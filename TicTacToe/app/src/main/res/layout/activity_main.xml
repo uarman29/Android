@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/board"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/board"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="265dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/topLeft"
+                android:layout_width="134dp"
+                android:layout_height="131dp"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:minWidth="134dp"
+                android:onClick="fill"
+                android:paddingTop="20dp"
+                android:scaleType="centerInside"
+                android:tag="1" />
+
+            <ImageView
+                android:id="@+id/topCenter"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:onClick="fill"
+                android:paddingTop="20dp"
+                android:scaleType="centerInside"
+                android:tag="2" />
+
+            <ImageView
+                android:id="@+id/topRight"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                android:onClick="fill"
+                android:paddingTop="20dp"
+                android:scaleType="centerInside"
+                android:tag="3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="265dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/centerLeft"
+                android:layout_width="134dp"
+                android:layout_height="131dp"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:minWidth="134dp"
+                android:onClick="fill"
+                android:paddingTop="20dp"
+                android:scaleType="centerInside"
+                android:tag="4" />
+
+            <ImageView
+                android:id="@+id/centerCenter"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:onClick="fill"
+                android:paddingTop="20dp"
+                android:scaleType="centerInside"
+                android:tag="5" />
+
+            <ImageView
+                android:id="@+id/centerRight"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                android:onClick="fill"
+                android:paddingTop="20dp"
+                android:scaleType="centerInside"
+                android:tag="6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="265dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/bottomLeft"
+                android:layout_width="134dp"
+                android:layout_height="131dp"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:minWidth="134dp"
+                android:onClick="fill"
+                android:paddingTop="20dp"
+                android:scaleType="centerInside"
+                android:tag="7" />
+
+            <ImageView
+                android:id="@+id/bottomCenter"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:onClick="fill"
+                android:paddingTop="20dp"
+                android:scaleType="centerInside"
+                android:tag="8" />
+
+            <ImageView
+                android:id="@+id/bottomRight"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                android:onClick="fill"
+                android:paddingTop="20dp"
+                android:scaleType="centerInside"
+                android:tag="9" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/winnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="206dp"
+        android:layout_marginRight="206dp"
+        android:layout_marginBottom="555dp"
+        android:gravity="center"
+        android:text="X has won!"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginLeft="154dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginRight="154dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="playAgain"
+        android:text="Play Again"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
